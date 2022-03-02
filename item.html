@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labaratory</title>
+
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/header.css">
+    <link rel="stylesheet" href="assets/style/nav.css">
+    <link rel="stylesheet" href="assets/style/item.css">
+    <link rel="stylesheet" href="assets/style/product.css">
+
+    <link type="image/x-icon" href="assets/img/discriptions/fav.ico" rel="shortcut icon">
+    <link type="Image/x-icon" href="assets/img/discriptions/fav.ico" rel="icon">
+
+
+    <meta property="og:title" content="Labaratory">
+    <meta property="og:site_name" content="Каталог">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Продажа брендовых вещей">
+    <meta property="og:image" content="assets/img/discriptions/prev.png">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header ">
+                <div class="header__container">
+                    <div class="header__block -block">
+                        <div class="header__nav">
+                            <a href="" class="header__srch-active">
+                                <img src="assets/img/icons/back.png" alt="">
+                            </a>
+                            <h1 class="">Labrotory</h1>
+                            <a href="cart.html" class="cart">
+                                <p></p>
+                                <img src="assets/img/icons/cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="prod">
+                <div class="prod__container">
+                    <div class="prod__item">
+                        <div class="prod__img">
+                            <div class="prod__img-scale" >
+                                <img src="assets/img/icons/scale.png" alt="">
+                            </div>
+                        </div>
+                        <div class="prod__info">
+                        </div>
+                    </div>
+                    <div class="prod__about">
+                        <div class="prod__about-container">
+                            <h2>Описание</h2>
+                            <ul class="prod__discirpt">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.querySelector('.header__srch-active').addEventListener('click' , (e) => {e.preventDefault(); history.back()})
+    </script>
+    <script src="assets/scripts/item.js"></script>
+    <script src="assets/scripts/getProduct.js"></script>
+    <script src="assets/scripts/cartMenu.js"></script>
+    <script src="assets/scripts/addCart.js"></script>
+    <script src="assets/scripts/checkButtonCart.js"></script>
+</body>
+</html>

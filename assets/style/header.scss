@@ -1,0 +1,136 @@
+.header {
+    z-index: 500;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 143px;
+    min-height: 143px;
+    //max-height: 83px;
+    background: #000000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__container {
+        height: 83px;
+        max-height: 83px;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+            font-family: Righteous;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 45px;
+
+            color: #ffffff;
+        }
+    }
+    &__block {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__hide {
+        display: none;
+    }
+    &__nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 42px;
+            height: 42px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__menu {
+        width: 28px;
+        height: 28x;
+        display: none;
+    }
+
+    &__srch {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 80%;
+        max-height: 80%;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 21px;
+        background: #ffffff;
+        padding-left: 5px;
+        padding-right: 5px;
+        input {
+            background: none;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            margin-bottom: 5px;
+            width: 90%;
+            margin-left: 5px;
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 16px;
+
+            color: #000000;
+        }
+        button {
+            background: none;
+            width: 5%;
+            img {
+                width: 28px;
+                height: 26px;
+            }
+        }
+    }
+
+    &__hide-block {
+        display: none !important;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+
+    @media (max-width: 600px) {
+        height: 47px;
+        min-height: 47px;
+        &__srch {
+            width: 100%;
+            input {
+                font-size: 14px;
+            }
+        }
+        &__block {
+            display: flex;
+        }
+
+        &__container {
+            width: 80%;
+            h1 {
+                font-size: 24px;
+            }
+        }
+        &__menu {
+            display: flex;
+        }
+        &__nav {
+            width: 100%;
+            a {
+                width: 28px;
+                height: 26px;
+            }
+        }
+    }
+}

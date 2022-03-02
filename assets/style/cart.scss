@@ -1,0 +1,590 @@
+.page {
+    display: flex;
+}
+.img {
+    width: 100%;
+    height: 100%;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+}
+.text_b {
+    font-weight: 700;
+}
+
+.header {
+    min-height: 83px;
+    height: 83px !important;
+}
+.invisible-header {
+    display: flex;
+    height: 83px;
+    width: 100%;
+}
+
+.input_row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 0;
+}
+.column {
+    flex-direction: column;
+}
+
+.nav {
+    display: none;
+}
+
+.safe-padding {
+    padding: 0 8px;
+}
+
+//СЕЛЕКТОР ДЛЯ БЛОКОВ СТРАНИЦЫ КОРЗИНЫ
+.cart {
+    display: flex;
+    width: 100vw;
+    font-family: Roboto;
+    font-size: 24px;
+    &__container {
+    }
+    &__list {
+    }
+    &__form {
+    }
+    &__button {
+    }
+}
+
+//СПИСОК ТОВАРОВ В КОРЗИНЕ
+.list {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-bottom: 50px;
+    &__container {
+        width: 100%;
+        max-width: 53vw;
+    }
+    &__column {
+        flex-direction: column;
+        width: 100%;
+    }
+    &__item {
+    }
+}
+
+//ОТДЕЛЬНЫЙ ТОВАР В КОРЗИНЕ
+.item {
+    display: flex;
+    width: 93.16%;
+    height: 100%;
+    border-width: 6px 20px;
+    border-style: solid;
+    border-radius: 35px;
+    border-image: url("../img/ui/borders/cart-item-border.png");
+    border-image-slice: 20%;
+    border-image-width: 6;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    margin: 40px 0;
+    &__container {
+        width: 100%;
+    }
+    &__row {
+        //ТО ЖЕ САМОЕ, ЧТО И .item-row ↓
+    }
+    &-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+        &__column {
+            //ТО ЖЕ САМОЕ, ЧТО И .item-row-column ↓
+        }
+        &-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        max-height: 180px;
+        max-width: 180px;
+        border-radius: 35px;
+    }
+    &__title {
+        font-family: Righteous;
+        font-size: 36px;
+        text-align: center;
+    }
+    &__calc {
+        font-family: "Roboto Condensed";
+    }
+    &__price {
+        font-family: "Roboto Condensed";
+        font-size: 36px;
+    }
+    &__quantity {
+        //ИЩИ .quantity НИЖЕ
+    }
+}
+
+//КОЛИЧЕСТВО ТОВАРА ДЛЯ ЗАКАЗА И "-" с "+"
+.quantity {
+    display: flex;
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 125px;
+    }
+    &__minus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border: solid black;
+        border-radius: 50%;
+        background-color: black;
+        cursor: pointer;
+    }
+    &__number {
+    }
+    &__plus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border: solid black;
+        border-radius: 50%;
+        background-color: black;
+        cursor: pointer;
+    }
+}
+
+//SPAN'ы ФИГУРЫ "МИНУС"
+.minus {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+
+//SPAN'ы ФИГУРЫ "ПЛЮС"
+.plus:first-child {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+.plus:last-child {
+    position: absolute;
+    transform: rotate(90deg);
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+
+//ФОРМА ДЛЯ ДАННЫХ ЗАКАЗЧИКА
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container {
+        display: flex;
+        justify-content: center;
+        width: 53vw;
+        // height: 300px;
+        align-items: center;
+        border-width: 5px 8px 5px 8px;
+        border-style: solid;
+        border-radius: 35px;
+        border-image: url("../img/ui/borders/cart-form-border.png");
+        border-image-slice: 20%;
+        border-image-width: 10;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+    }
+    &__fields {
+        //ИЩИ .field НИЖЕ
+    }
+}
+
+//ПОЛЯ ФОРМЫ ВВОДА
+.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 70%;
+    padding: 50px 0;
+    &__phonenumber {
+        //ИЩИ .phonenumber НИЖЕ
+    }
+    &__email {
+        //ИЩИ .email НИЖЕ
+    }
+    &__address {
+        //ИЩИ .address НИЖЕ
+    }
+    &__index {
+        //ИЩИ .index НИЖЕ
+    }
+    &__price {
+        display: flex;
+        justify-content: center;
+        font-size: 42px;
+        margin-top: 30px;
+    }
+}
+
+//СТИЛИЗАЦИЯ ИНПУТОВ
+.cart-form-input {
+    width: 240px;
+    height: 40px;
+    border: black solid 2px;
+    border-radius: 11px;
+    padding: 0 15px;
+    font-family: serif;
+    font-size: 22px;
+}
+
+//ПОЛЕ ВВОДА ТЕЛЕФОНА
+.phonenumber {
+    display: flex;
+    &__text {
+    }
+    &__input {
+    }
+}
+
+//ПОЛЕ ВВОДА ЭЛЕКТРОННОЙ ПОЧТЫ
+.email {
+    display: flex;
+    &__text {
+    }
+    &__input {
+    }
+}
+
+//ПОЛЕ ВВОДА АДРЕСА
+.address {
+    display: flex;
+    &__text {
+    }
+    &__input {
+    }
+}
+
+//ПОЛЕ ВВОДА ПОЧТОВОГО ИНДЕКСА
+.index {
+    display: flex;
+    &__text {
+    }
+    &__input {
+    }
+}
+
+//КНОПКА ЗАКАЗАТЬ
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 80px;
+        border-width: 2px 5px 2px 5px;
+        border-style: solid;
+        border-radius: 35px;
+        border-image: url("../img/ui/borders/cart-button-border.png");
+        border-image-slice: 20%;
+        border-image-width: 10;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        button {
+            width: 100%;
+            height: 90%;
+            border-radius: 35px;
+            background-color: white;
+            font-size: 56px;
+            user-select: none;
+        }
+    }
+}
+
+//ПРЕДУПРЕЖДЕНИЕ ПОСЛЕ НАЖАТИЯ "ЗАКАЗАТЬ"
+// body {
+//     z-index: 99;
+//     background: gray left top no-repeat;
+//     pointer-events: none;
+// }
+// .cart-form-input {
+//     background-color: gray;
+// }
+// .button {
+//     &__container {
+//         button {
+//             background-color: gray;
+//         }
+//     }
+// }
+.warning {
+    display: flex;
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto Condensed";
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 400px;
+        text-align: center;
+        border-width: 5px 8px 5px 8px;
+        border-style: solid;
+        border-radius: 35px;
+        border-image: url("../img/ui/borders/warning-border.png");
+        border-image-slice: 20%;
+        border-image-width: 10;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        background-color: white;
+    }
+    &__block {
+        padding: 0 60px;
+        .title {
+            font-size: 36px;
+        }
+        .description {
+            font-size: 20px;
+        }
+        .post {
+            font-size: 20px;
+        }
+    }
+}
+
+//MEDIA ЗАПРОСЫ
+
+@media (max-width: 1280px) {
+    .cart-form-input {
+        width: 200px;
+    }
+    .button {
+        &__container {
+            width: 220px;
+            height: 60px;
+            border-width: 2px 5px 2px 5px;
+            border-style: solid;
+            border-radius: 35px;
+            border-image: url("../img/ui/borders/cart-button-border.png");
+            border-image-slice: 20%;
+            border-image-width: 10;
+            border-image-outset: 0;
+            border-image-repeat: stretch;
+            button {
+                width: 100%;
+                height: 90%;
+                border-radius: 35px;
+                background-color: white;
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .cart {
+        font-size: 22px;
+    }
+    .item {
+        display: flex;
+        width: 93.16%;
+        height: 100%;
+        border-width: 6px 20px;
+        border-style: solid;
+        border-radius: 35px;
+        border-image: url("../img/ui/borders/cart-item-border.png");
+        border-image-slice: 20%;
+        border-image-width: 6;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        margin: 40px 0;
+
+        &__img {
+            max-height: 150px;
+            max-width: 150px;
+            border-radius: 35px;
+        }
+        &__title {
+            font-family: Righteous;
+            font-size: 30px;
+        }
+        &__price {
+            font-family: "Roboto Condensed";
+            font-size: 30px;
+        }
+    }
+    .input_row {
+        margin: 5px 0;
+    }
+    .quantity {
+        &__container {
+            width: 100px;
+        }
+        &__minus {
+            width: 30px;
+            height: 30px;
+        }
+        &__plus {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    //SPAN'ы ФИГУРЫ "МИНУС"
+    .minus {
+        width: 18px;
+    }
+
+    //SPAN'ы ФИГУРЫ "ПЛЮС"
+    .plus:first-child {
+        width: 18px;
+    }
+    .plus:last-child {
+        width: 18px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .item {
+        height: 400px;
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-row {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 80%;
+        }
+    }
+    .cart-form-input {
+        width: 160px;
+    }
+    .form {
+        &__container {
+            width: 70vw;
+        }
+    }
+    .fields {
+        width: 80%;
+        &__price {
+            font-size: 36px;
+        }
+    }
+    .warning {
+        &__block {
+            padding: 0 60px;
+            .title {
+                font-size: 28px;
+            }
+            .description {
+                font-size: 20px;
+            }
+            .post {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .input_row {
+        flex-direction: column;
+    }
+    .safe-padding {
+        padding: 10px 0;
+    }
+    .form {
+        text-align: center;
+    }
+    .warning {
+        &__container {
+            height: 400px;
+            width: 90vw;
+        }
+        &__block {
+            padding: 0 10px;
+            .title {
+                font-size: 22px;
+            }
+            .description {
+                font-size: 18px;
+            }
+            .post {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.header {
+    height: 83px !important;
+    min-height: 83px !important;
+    @media(max-width:600px) {
+        height: 47px !important;
+        min-height: 47px !important;
+    }
+}
+
+
+.button__all-del {
+    width: 250px;
+    height: 60px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    background:rgb(255, 255, 255) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    transition: 0.4s;
+    border: 1px solid black;
+    border-radius: 31px;
+}
+.button__all-del:hover {
+    transition: 0.4s;
+    background: black;
+    color: white;
+}
+
+
+.form__container {
+    margin-bottom: 30px;
+}
+
+.warning__invisible {
+    display: flex !important;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+}

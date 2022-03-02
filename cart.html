@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labaratory</title>
+
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/header.css">
+    <link rel="stylesheet" href="assets/style/nav.css">
+    <link rel="stylesheet" href="assets/style/cart.css">
+
+    <link type="image/x-icon" href="assets/img/discriptions/fav.ico" rel="shortcut icon">
+    <link type="Image/x-icon" href="assets/img/discriptions/fav.ico" rel="icon">
+
+
+    <meta property="og:title" content="Labaratory">
+    <meta property="og:site_name" content="корзина">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Продажа брендовых вещей">
+    <meta property="og:image" content="assets/img/discriptions/prev.png">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header ">
+                <div class="header__container">
+                    <div class="header__block -block">
+                        <div class="header__nav">
+                            <a href="" class="header__srch-active">
+                                <img src="assets/img/icons/back.png" alt="">
+                            </a>
+                            <h1 class="">Labrotory</h1>
+                            <a href="cart.html" class="cart">
+                                <p></p>
+                                <img src="assets/img/icons/cart.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!--Заглушка для fixed header-->
+            <div class="invisible-header"></div>
+
+            <section class="page cart">
+                <div class="cart__container">
+                    <div class="cart__list list">
+                        <div class="list__container">
+                            <button class="button__all-del">Удалить все</button>
+                            <div class="list__column">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__form form">
+                        <div class="form__container">
+                            <form class="form__fields fields">
+                                <div class="fields__phonenumber phonenumber input_row">
+                                    <div class="phonenumber__text">
+                                        <p class="text_b safe-padding">Номер телефона:</p>
+                                    </div>
+
+                                    <div class="phonenumber__input">
+                                        <input class="cart-form-input" type="tel" name="phone" id="" required>
+                                    </div>
+                                </div>
+
+                                <div class="fields__email email input_row">
+                                    <div class="email__text">
+                                        <p class="text_b safe-padding">E-mail:</p>
+                                    </div>
+
+                                    <div class="email__input">
+                                        <input class="cart-form-input" type="email" name="email" id="" required>
+                                    </div>
+                                </div>
+
+                                <div class="fields__address address input_row">
+                                    <div class="address__text">
+                                        <p class="text_b safe-padding">Адрес доставки:</p>
+                                    </div>
+
+                                    <div class="address__input">
+                                        <input class="cart-form-input" type="text" name="address" id="" required>
+                                    </div>
+                                </div>
+
+                                <div class="fields__index index input_row">
+                                    <div class="index__text">
+                                        <p class="text_b safe-padding">Почтовый индекс:</p>
+                                    </div>
+
+                                    <div class="index__input">
+                                        <input class="cart-form-input" type="tel" name="post_index" id="" required>
+                                    </div>
+                                </div>
+                                <div class="fields__index index input_row">
+                                    <div class="index__text">
+                                        <p class="text_b safe-padding">telegram (если есть)</p>
+                                    </div>
+
+                                    <div class="index__input">
+                                        <input class="cart-form-input" type="tel" name="tg_id" id="" required>
+                                    </div>
+                                </div>
+
+                                <div class="fields__index index input_row">
+                                    <div class="index__text">
+                                        <p class="text_b safe-padding">Ваш размер</p>
+                                    </div>
+
+                                    <div class="index__input">
+                                        <input class="cart-form-input" type="tel" name="size" id="" required>
+                                    </div>
+                                </div>
+
+                                <div class="fields__price">
+                                    <p class="text_b safe-padding total__sum-bold">Итого: 0р.</p>
+                                </div>
+                                <div class="cart__button button">
+                                    <div class="button__container">
+                                        <button class="text_b send__button" type="submit">Заказать</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+              
+                </div>
+            </section>
+
+        </div>
+
+        <div class="warning">
+            <div class="warning__container">
+                <div class="warning__block">
+                    <p class="text_b title">Ваш заказ зарегистрирован под номером:</p>
+                    <p class="text_b title uniq-code"></p>
+                    <br>
+                    <p class="text_400 description">Для подтверждения заказа переведите
+                        <span class="text_b description total-sum-api"></span> на счёт привязанный к карте
+                        <span class="text_b description">1234 5678 9101 1121</span>.
+                    </p>
+                    <p class="text_b post">В комментарии обязательно укажите номер вашего заказа</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.header__srch-active').addEventListener('click' , (e) => {e.preventDefault(); history.back()})
+    </script>
+    <script src="assets/scripts/cart.js"></script>
+    <script src="assets/scripts/sendForm.js"></script>
+    <style>
+        @media(max-width:600px) {
+            .item__title {
+                margin-top: 10px;
+            }
+            .item__calc {
+                margin-top: 10px;
+            }
+            .item__price {
+                margin-top: 10px;
+            }
+            .item__quantity {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</body>
+
+</html>

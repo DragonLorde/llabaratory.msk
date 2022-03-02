@@ -1,0 +1,46 @@
+@import "imports/_null.scss";
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500&display=swap");
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: 20px;
+    background: black;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 120px;
+    &__info {
+        margin-left: 60px;
+        p {
+            font-family: Righteous;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 30px;
+
+            color: #ffffff;
+            a {
+                font-family: Roboto Condensed;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 21px;
+
+                color: #ffffff;
+            }
+        }
+    }
+}

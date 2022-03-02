@@ -1,0 +1,12 @@
+.header {
+  height: 83px !important;
+  min-height: 83px !important;
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 47px !important;
+    min-height: 47px !important;
+  }
+}
+/*# sourceMappingURL=search.css.map */
